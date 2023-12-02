@@ -36,8 +36,8 @@ def get_redshift_data():
         print ("Data collected")
 
         # Close the cursor and connection
-        cursor.close()
-        conn.close()
+        # cursor.close()
+        # conn.close()
 
         return data
 
