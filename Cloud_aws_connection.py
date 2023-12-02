@@ -50,7 +50,8 @@ def get_redshift_data():
 def get_data():
     data = get_redshift_data()
     print(data)
-    return jsonify(data)
+    return 'x'
+   # return jsonify(data)
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=8000)
