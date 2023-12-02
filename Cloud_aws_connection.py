@@ -20,6 +20,7 @@ def get_redshift_data():
             host=host,
             port=port
         )
+        print ("Connection established")
 
         # Create a cursor object to execute SQL queries
         cursor = conn.cursor()
@@ -27,9 +28,11 @@ def get_redshift_data():
         # Example: Execute a query
         cursor.execute("SELECT * from dev.public.diabetes WHERE smoking_history ='never' and age > 50")
         rows = cursor.fetchall()
+        print ("Queries executed")
 
         # Convert the results to a list of dictionaries
         data = [{'column1': row[0], 'column2': row[1]} for row in rows]
+        print ("Data collected")
 
         # Close the cursor and connection
         cursor.close()
@@ -48,5 +51,8 @@ def get_data():
     return jsonify(data)
 
 if __name__ == '__main__':
-    app.run(debug=True)
-    get_redshift_data()
+   # app.run(debug=True)
+    print("Calling redshift data method")
+    data = get_redshift_data()
+    print("Response")
+    print(jsonify(data))
