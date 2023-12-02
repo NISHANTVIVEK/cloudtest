@@ -1,4 +1,5 @@
 from flask import Flask, jsonify
+import json
 import psycopg2
 
 app = Flask(__name__)
@@ -55,4 +56,4 @@ if __name__ == '__main__':
     print("Calling redshift data method")
     data = get_redshift_data()
     print("Response")
-    print(jsonify(data))
+    print(json.loads(data))
