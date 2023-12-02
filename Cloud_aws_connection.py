@@ -50,7 +50,7 @@ def get_redshift_data():
 def get_data():
     data = get_redshift_data()
     print(data)
-    return 'x'
+    return data
    # return jsonify(data)
 
 if __name__ == '__main__':
