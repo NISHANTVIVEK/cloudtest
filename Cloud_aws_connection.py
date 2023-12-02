@@ -55,8 +55,9 @@ def get_data():
         {'id': 2, 'name': 'Object 2'},
         {'id': 3, 'name': 'Object 3'}
     ]
+    return jsonify({'datas':data})
    # return jsonify(data1)
-    return json.dumps(data1), 200, {'Content-Type': 'application/json'}
+    #return json.dumps(data1), 200, {'Content-Type': 'application/json'}
    # return data
    # return jsonify(data)
 
