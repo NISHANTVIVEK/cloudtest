@@ -49,11 +49,12 @@ def get_redshift_data():
 @app.route('/get_data', methods=['GET'])
 def get_data():
     data = get_redshift_data()
+    print(data)
     return jsonify(data)
 
 if __name__ == '__main__':
-   # app.run(debug=True)
-    print("Calling redshift data method")
-    data = get_redshift_data()
-    print("Response")
-    print(data)
+    app.run(host='0.0.0.0', port=8000)
+   # print("Calling redshift data method")
+   # data = get_redshift_data()
+  #  print("Response")
+  #  print(data)
