@@ -55,7 +55,7 @@ def get_data():
         {'id': 2, 'name': 'Object 2'},
         {'id': 3, 'name': 'Object 3'}
     ]
-    x = jsonify({'datas':data})
+    x = json.dumps(data1)
     print ("Data converted")
     print (x)
     return x
